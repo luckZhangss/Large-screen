@@ -1,32 +1,58 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+  <div>
+    <!-- <span class="demonstration">默认 click 触发子菜单</span>
+    <el-cascader v-model="value" :options="options" filterable> </el-cascader> -->
+   <router-view></router-view>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+// import req from '@/utils/req'
+export default {
+  data() {
+    return {
+  //     value: ['1','1-1','1-1-1'],
+  //     options: [
+  //       {
+  //         value: '1',
+  //         label: '山西省',
+  //         children: [
+  //           {
+  //             value: "1-1",
+  //             label: "忻州市",
+  //             children:[
+  //               {
+  //                 value:'1-1-1',
+  //                 label:'忻府区'
+  //               }
+  //             ]
+  //           },
+  //           {
+  //             value: "太原市",
+  //             label: "太原市",
+  //             children:[
+  //               {
+  //                 value:'小店区',
+  //                 label:'小店区'
+  //               }
+  //             ]
+  //           }
+  //         ],
+  //       },
+  //     ],
+    };
+  },
+  // created(){
+  //   req.get('').then((res)=>{
+  //     console.log(res);
+  //   })
+  // },
+  // mounted(){
+  //   req.get('').then((res)=>{
+  //     console.log(res);
+  //   })
+  // }
+};
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style lang="scss" scoped></style>
